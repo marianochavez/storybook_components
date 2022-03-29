@@ -27,6 +27,10 @@ export interface MyLabelProps {
      * Font color
      **/
     fontColor?: string;
+    /**
+     * Background color
+     **/
+    backgroundColor?: string;
 }
 
 function capitalizeStr(str: string): string {
@@ -40,13 +44,14 @@ export const MyLabel = ({
     capitalize = false,
     allCaps = false,
     fontColor,
+    backgroundColor = 'transparent',
 }: MyLabelProps) => {
     if (allCaps) label = label.toUpperCase();    
     if (capitalize) label = capitalizeStr(label);
 
     return (
         <span className={`label ${size} ${"text-"+color} `}
-            style={{ color: fontColor }}
+            style={{ color: fontColor, backgroundColor }}
         >
             {label}
         </span>
