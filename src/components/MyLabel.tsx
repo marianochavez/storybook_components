@@ -1,6 +1,4 @@
 import './mylabel.css';
-import { AllCaps } from '../stories/components/MyLabel.stories';
-
 
 export interface MyLabelProps {
     /**
@@ -57,3 +55,5 @@ export const MyLabel = ({
         </span>
     )
 }
+
+export default MyLabel;
